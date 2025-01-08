@@ -9,14 +9,8 @@ import concurrent
 from config import (
     RESULTS_FILE,
     SOLUTIONS_DIR,
-    MODEL,
-    OPENAI_API_KEY,
     SOLUTIONS_PER_GROUP,
 )
-
-from langchain_openai import ChatOpenAI
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
 
 logging.basicConfig(level=logging.INFO)
 
@@ -37,7 +31,6 @@ def evaluate_solution(filename: str) -> tuple[int, Union[int, str]]:
         code = f.read()
 
     try:
-        # Extract the function code
         code = code.replace("```python", "").replace("```", "")
         tree = ast.parse(code)
         function_def = next(
@@ -45,10 +38,8 @@ def evaluate_solution(filename: str) -> tuple[int, Union[int, str]]:
         )
         extracted_code = ast.unparse(function_def)
 
-        # Execute the function with test cases (toy example - be cautious!)
         exec(extracted_code, globals())
 
-        # Correctness tests
         correct = (
             1
             if all(
@@ -99,7 +90,7 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    solutions_dir = args.data_dir or SOLUTIONS_DIR  # Use provided dir or default
+    solutions_dir = args.data_dir or SOLUTIONS_DIR
 
     results = []
 

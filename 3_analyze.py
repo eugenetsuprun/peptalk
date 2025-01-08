@@ -4,7 +4,6 @@ from config import RESULTS_FILE
 from statsmodels.stats.proportion import proportions_ztest
 import os
 
-# Global constants
 GROUP_COL = "group"
 
 
@@ -43,7 +42,6 @@ def analyze_correct(df):
         [correct_experimental, correct_control], [n_experimental, n_control]
     )
 
-    # descriptive stats
     desc_stats = df.groupby(GROUP_COL)["correct"].describe()
 
     conclusion = (
@@ -77,8 +75,6 @@ def analyze_solution_length(df):
         if p_value < 0.05
         else "No statistically significant difference (fail to reject H0)"
     )
-
-    # Descriptive statistics
     desc_stats = df.groupby(GROUP_COL)["solution_length"].describe()
 
     return f"""T-Test Results for Solution Length:
