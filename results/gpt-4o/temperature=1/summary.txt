@@ -1,26 +1,20 @@
-Analysis of 'correct' (Correctness):
-
-Z-Test for Proportions:
-
-Descriptive Statistics:
-              count  mean       std  min  25%  50%  75%  max
+Correctness Analysis (Z-test for Proportions):
+    Descriptive Stats:
+                  count  mean       std  min  25%  50%  75%  max
 group                                                       
 control       100.0  0.76  0.429235  0.0  1.0  1.0  1.0  1.0
 experimental  100.0  0.87  0.337998  0.0  1.0  1.0  1.0  1.0
 
-z-statistic: 2.003, p-value: 0.045
-Conclusion: Statistically significant difference found (reject H0)
-
-
-Analysis of solution length:
-
-T-Test Results for Solution Length:
-Descriptive Statistics:
-              count        mean         std    min    25%    50%    75%    max
+    z-statistic: -2.003, p-value: 0.045
+    Significant Difference: True
+    
+Solution Length Analysis (T-test):
+    Descriptive Stats:
+                  count        mean         std    min    25%    50%    75%    max
 group                                                                         
 control        76.0  303.289474   18.399142  275.0  289.0  301.0  314.0  389.0
 experimental   87.0  348.885057  117.326064  256.0  289.0  306.0  328.0  707.0
 
-t-statistic: 3.351, p-value: 0.001
-Conclusion: Statistically significant difference found (reject H0)
-
+    t-statistic: -3.351, p-value: 0.001
+    Significant Difference: True
+    
