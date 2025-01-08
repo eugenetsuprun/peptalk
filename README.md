@@ -25,8 +25,8 @@ Take these findings with a grain of salt. It's for that prompt and those models 
 |:---|:---|:---|:---|:---|:---|
 |gpt-4o-mini|1|44.4%|48.6%|500|❌|
 |gpt-4o-mini|0|40.4%|88.8%|500|✅|
-|gpt-4o|1|76|87|100|✅|
-|gpt-4o|0|100|97|100|❌|
+|gpt-4o|1|76%|87%|100|✅|
+|gpt-4o|0|100%|97%|100|❌|
 
 That's a pretty dramatic difference between the control and experimental groups for `gpt-4o-mini` with temperature 0.0. I'm not sure why the pep talk helped so much here.
 
