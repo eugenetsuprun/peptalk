@@ -2,6 +2,8 @@
 
 I explore how giving the model a pep talk on solving a coding-interview-style problem can affect the code generated.
 
+[(LinkedIn post about this repo)
+](https://www.linkedin.com/posts/eugenetsuprun_github-eugenetsuprunpeptalk-does-giving-activity-7282742982213005312-L7gb?utm_source=share&utm_medium=member_desktop)
 ## Experiment Overview
 
 I had AI to try to solve a coding-interview style problem WITH (experimental group) and WITHOUT (control group) a pep talk. 
