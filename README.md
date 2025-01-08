@@ -19,14 +19,16 @@ I ran the experiment on two models: `gpt-4o-mini` and `gpt-4o` with two differen
 
 ## Results
 
-These findings are based on a specific prompt and two language models, so they may not be universally applicable.
+Take these findings with a grain of salt. It's for that prompt and those models only with those temperatures only. 
 
-|Model|Temperature| % of Solutions Correct (No Pep Talk) | % of Solutions Correct (With Pep Talk) |Significant Difference?|
+|Model|Temperature| % of Solutions Correct (No Pep Talk) | % of Solutions Correct (With Pep Talk) |N of Solutions Per Group | Significant Difference?|
 |:---|:---|:---|:---|:---|
-|gpt-4o-mini|1|44.4%|48.6%|❌|
-|gpt-4o-mini|0|40.4%|88.8%|✅|
-|gpt-4o|1|76|87|✅|
-|gpt-4o|0|100|97|❌|
+|gpt-4o-mini|1|44.4%|48.6%|500|❌|
+|gpt-4o-mini|0|40.4%|88.8%|500|✅|
+|gpt-4o|1|76|87|100|✅|
+|gpt-4o|0|100|97|100|❌|
+
+That's a pretty dramatic difference between the control and experimental groups for `gpt-4o-mini` with temperature 0.0. I'm not sure why the pep talk helped so much here.
 
 # 🚀 Quick Start
 
@@ -48,16 +50,6 @@ python 2_evaluate_solutions.py
 python 3_analyze.py
 ```
 
-## My Findings
-
-These findings are super limited to the one core prompt I used and the one specific model I used. (`gpt-4o-mini`). Take them with a grain of salt. 🤏
-
-### Results
-
-[add this]
-
-
-
 ## Repository Structure
 
 ```
@@ -75,6 +67,6 @@ These findings are super limited to the one core prompt I used and the one speci
             ├── solution_500_control.py
             ├── results.csv
             └── summary.txt
-        ...   
+        └── temperature=0   
     └── gpt-4o
 ```
