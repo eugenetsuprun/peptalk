@@ -22,7 +22,7 @@ I ran the experiment on two models: `gpt-4o-mini` and `gpt-4o` with two differen
 Take these findings with a grain of salt. It's for that prompt and those models only with those temperatures only. 
 
 |Model|Temperature| % of Solutions Correct (No Pep Talk) | % of Solutions Correct (With Pep Talk) |N of Solutions Per Group | Significant Difference?|
-|:---|:---|:---|:---|:---|
+|:---|:---|:---|:---|:---|:---|
 |gpt-4o-mini|1|44.4%|48.6%|500|❌|
 |gpt-4o-mini|0|40.4%|88.8%|500|✅|
 |gpt-4o|1|76|87|100|✅|
