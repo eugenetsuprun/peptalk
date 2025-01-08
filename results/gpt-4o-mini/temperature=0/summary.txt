@@ -1,0 +1,26 @@
+Analysis of 'correct' (Correctness):
+
+Z-Test for Proportions:
+
+Descriptive Statistics:
+              count   mean       std  min  25%  50%  75%  max
+group                                                        
+control       500.0  0.404  0.491189  0.0  0.0  0.0  1.0  1.0
+experimental  500.0  0.888  0.315682  0.0  1.0  1.0  1.0  1.0
+
+z-statistic: 16.003, p-value: 0.000
+Conclusion: Statistically significant difference found (reject H0)
+
+
+Analysis of solution length:
+
+T-Test Results for Solution Length:
+Descriptive Statistics:
+              count       mean         std    min    25%    50%    75%    max
+group                                                                        
+control       202.0  277.49505   15.386641  256.0  275.0  275.0  280.0  348.0
+experimental  444.0  330.25000  157.699268  219.0  256.0  256.0  280.0  743.0
+
+t-statistic: 4.742, p-value: 0.000
+Conclusion: Statistically significant difference found (reject H0)
+

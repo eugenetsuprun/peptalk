@@ -1,0 +1,54 @@
+"""Given a string of digits from 2 through 9, return all possible letter combinations that the number could represent (in any order).
+
+Mapping of digits to letters:
+
+Button 2: ABC  
+Button 3: DEF  
+Button 4: GHI  
+Button 5: JKL  
+Button 6: MNO  
+Button 7: PQRS  
+Button 8: TUV  
+Button 9: WXYZ  
+
+The number might have some non-digit characters, ones, or zeros. Filter them out.
+
+Example 1:
+
+Input: digits = "23"  
+Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+
+Example 2:  
+Input: digits = ""  
+Output: []
+
+Example 3:  
+Input: digits = "2"  
+Output: ["a","b","c"]
+
+Example 4:  
+Input: digits = "12*30"  
+Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+
+The length of digits will be between 0 and 4.  
+digits[i] is a digit in the range ['2', '9'].
+
+The function signature is: letterCombinations(digits: str) -> list[str]
+
+Very important: produce a working solution but one that uses as few characters as possible. Keep the function signature as described above but other than that, take any shortcuts you need to to reduce the character count of the function signature.
+
+Do not use imports.
+
+---
+
+You have the skills to tackle this challenge head-on! Think of each digit as a doorway to a world of possibilities. With each combination, you're piecing together a puzzle that showcases your programming prowess. Remember, every successful coding solution starts with a single line of thought. Embrace the creative process, and don’t hesitate to experiment with different approaches. You’ve got this!
+
+Stay positive and confident in your ability. Coding is an exploration, and each problem is an opportunity to grow. As you work through this task, keep in mind the joy of discovering new solutions. Every keystroke brings you closer to unraveling this challenge. Get excited and let's see the ingenuity you’ll bring to the table!"""
+
+def letterCombinations(d): 
+ r={'2':'abc','3':'def','4':'ghi','5':'jkl','6':'mno','7':'pqrs','8':'tuv','9':'wxyz'} 
+ p=[''] 
+ for c in d: 
+  if c in r: 
+   p=[x+y for x in p for y in r[c]] 
+ return p  if d else []

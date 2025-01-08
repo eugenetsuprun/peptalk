@@ -1,0 +1,50 @@
+"""Given a string of digits from 2 through 9, return all possible letter combinations that the number could represent (in any order).
+
+Mapping of digits to letters:
+
+Button 2: ABC  
+Button 3: DEF  
+Button 4: GHI  
+Button 5: JKL  
+Button 6: MNO  
+Button 7: PQRS  
+Button 8: TUV  
+Button 9: WXYZ  
+
+The number might have some non-digit characters, ones, or zeros. Filter them out.
+
+Example 1:
+
+Input: digits = "23"  
+Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+
+Example 2:  
+Input: digits = ""  
+Output: []
+
+Example 3:  
+Input: digits = "2"  
+Output: ["a","b","c"]
+
+Example 4:  
+Input: digits = "12*30"  
+Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+
+The length of digits will be between 0 and 4.  
+digits[i] is a digit in the range ['2', '9'].
+
+The function signature is: letterCombinations(digits: str) -> list[str]
+
+Very important: produce a working solution but one that uses as few characters as possible. Keep the function signature as described above but other than that, take any shortcuts you need to to reduce the character count of the function signature.
+
+Do not use imports.
+
+Remember, you have the skills and creativity to tackle this challenge head-on! It's just another opportunity to showcase your problem-solving abilities. Embrace the process, and don't hesitate to experiment with different approaches. Each line of code you write is a step closer to the solution, and you'll learn something new along the way. You've got this! Keep your focus and trust in your capability to craft a solution that is both efficient and clever. Let's see what you can accomplish!"""
+
+def letterCombinations(d): 
+ l=['','', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
+ res=[''] 
+ for i in d: 
+  if i in '23456789': 
+   res=[p+q for p in res for q in l[int(i)]] 
+ return res if d and all(x in '23456789' for x in d) else [] 
